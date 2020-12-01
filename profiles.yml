@@ -1,0 +1,12 @@
+northwind_sh:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: academy-teste-295413
+      dataset: dbt_leo
+      threads: 1
+      keyfile: c/Users/user/Documents/Cursos_online/Academy-teste-9d851cb0df65.json
+      timeout_seconds: 300
+      priority: interactive

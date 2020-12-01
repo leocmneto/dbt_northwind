@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: fct_order_details
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+
+      - name: customer_fk
+        description: the customer foreign key
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_SK
+          
+      - name: product_fk
+        description: the product_ foreign key
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_SK
+
+
+      - name: employee_fk
+        description: the employee foreign key
+        tests:
+          - relationships:
+              to: ref('dim_employees')
+              field: employee_SK
+          
+          
+      - name: shipper_fk
+        description: the shipper foreign key
+        tests:
+          - relationships:
+              to: ref('dim_shippers')
+              field: shipper_SK
