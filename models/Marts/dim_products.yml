@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: dimension table products
+    columns:
+
+      - name: product_SK
+        description: products Surrogate Key
+        tests:
+          - unique
+          - not_null
+
+      - name: category_id
+        description: products category id
+        tests:
+          - not_null
+
+      - name: units_in_stock
+        description: units_in_stock of each pruduct
+        tests:
+          - not_null
+
+      - name: unit_price
+        description: unit_price of each pruduct
+        tests:
+          - not_null
+
+      - name: units_on_order
+        description: unit of each pruduct on orders
+        tests:
+          - not_null
+      
+      - name: quantity_per_unit
+        description: quantity of each pruduct
+        tests:
+          - not_null
+
+
+      - name: is_discontinued
+        description: The product still being manufactured?
+        tests:
+          - not_null
+          - accepted_values:
+              values: [True, False]
+              quote: false
+
+      

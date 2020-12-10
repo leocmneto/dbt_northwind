@@ -2,8 +2,15 @@ version: 2
 
 models:
   - name: dim_customers
+    description: dimension table customers
     columns:
+
       - name: customer_SK
+        description: customers Surrogate Key
         tests:
           - unique
           - not_null
+
+
+
+

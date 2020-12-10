@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_suppliers
+    description: dimension table suppliers
+    columns:
+
+      - name: supplier_SK
+        description: suppliers Surrogate Key
+        tests:
+          - unique
+          - not_null
+
+      - name: division
+        description: suppliers division divided in Europe, NA, Asia and Latam as below
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Europe', 'North America', 'Asia', 'LATAM']
+          - relationships:
+              to: ref('seed_country_divisions')
+              field: division
+
+
+     

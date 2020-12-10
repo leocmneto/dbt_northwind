@@ -12,7 +12,6 @@ with
     , transformed as (
         select 
         row_number() over (order by suppliers.supplier_id) as supplier_SK
-        , suppliers.supplier_id
 
             /* Metrics */   
         , suppliers.country	    		

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_shippers
+    description: dimension table shippers
+    columns:
+
+      - name: shipper_SK
+        description: shippers Surrogate Key
+        tests:
+          - unique
+          - not_null
+
+      - name: company_name
+        description: shippers company_name
+
+      

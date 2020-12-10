@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_employees
+    description: employees dimension table 
+    columns:
+
+      - name: employee_SK
+        description: employees Surrogate Key
+        tests:
+          - unique
+          - not_null
+
+
+
