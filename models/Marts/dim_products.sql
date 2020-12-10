@@ -2,7 +2,7 @@ with
     selected as (
         select
             /* PK */
-
+            product_id
             /* FK */
             , category_id	
             , product_name
